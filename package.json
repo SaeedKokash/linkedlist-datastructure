@@ -1,0 +1,23 @@
+{
+  "name": "linkedlist-datastructure",
+  "version": "1.0.0",
+  "description": "a project for creating a linked list and testing it",
+  "main": "ll.js",
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaeedKokash/linkedlist-datastructure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaeedKokash/linkedlist-datastructure/issues"
+  },
+  "homepage": "https://github.com/SaeedKokash/linkedlist-datastructure#readme",
+  "dependencies": {
+    "jest": "^29.0.3"
+  }
+}
