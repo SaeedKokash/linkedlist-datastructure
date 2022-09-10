@@ -88,3 +88,39 @@ describe('Delete the middle item of the linked list', () => {
     })
 })
 
+describe('Insert before a specific value', () => {
+
+    test('Insert before an empty linked list', () => {
+        const ll = new LinkedList();
+        expect(ll.insertBefore('a', 'b')).toEqual('Linked list is empty');
+    })
+
+    test('Insert before a specific value', () => {
+        const ll = new LinkedList();
+        ll.append('a');
+        ll.append('b');
+        ll.append('c');
+        ll.append('d');
+        ll.append('e');
+
+        // testing the linked list before inserting
+        expect(ll.head.value).toEqual('a');
+        expect(ll.head.next.value).toEqual('b');
+        expect(ll.head.next.next.value).toEqual('c');
+        expect(ll.head.next.next.next.value).toEqual('d');
+        expect(ll.head.next.next.next.next.value).toEqual('e');
+        expect(ll.head.next.next.next.next.next).toBeNull();
+
+        // inserting before a specific value
+        ll.insertBefore('c', 'z');
+
+        // testing the linked list after inserting
+        expect(ll.head.value).toEqual('a');
+        expect(ll.head.next.value).toEqual('b');
+        expect(ll.head.next.next.value).toEqual('z');
+        expect(ll.head.next.next.next.value).toEqual('c');
+        expect(ll.head.next.next.next.next.value).toEqual('d');
+        expect(ll.head.next.next.next.next.next.value).toEqual('e');
+        expect(ll.head.next.next.next.next.next.next).toBeNull();
+    })
+})

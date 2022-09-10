@@ -46,6 +46,23 @@ class LinkedList {
         }
     }
 
+    // insert a node in a specific position
+    insertBefore(val, newVal) {
+        const node = new Node(newVal);
+        if(!this.head) { // this means that linked list is empty
+            return 'Linked list is empty';
+        } else { // this means that linked list is not empty
+            let currentNode = this.head;
+            let previousNode = this.head;
+            while (currentNode.value !== val) {
+                previousNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            previousNode.next = node;
+            node.next = currentNode;
+        }
+    }
+
 }
 
 module.exports = LinkedList;
